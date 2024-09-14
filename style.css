@@ -29,7 +29,7 @@ hr {
 }
 
 header nav ul {
-    display: block;
+    display: flex;
     margin: 0 auto;
     width: fit-content;
 }
@@ -37,6 +37,7 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     padding: 16px 16px;
+    text-wrap: nowrap;
 }
 
 nav ul li a {
@@ -95,9 +96,9 @@ footer ul li a {
 }
 
 .footer-links {
-    width: 10px;
+    width: 14px;
     float: right;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .footer-links img {
@@ -111,17 +112,16 @@ footer ul li a {
     font-weight: 200;
     font-size: 18px;
     letter-spacing: 2px;
-    padding: 5px;
     color: #3a383d;
     text-transform: uppercase;
-    margin: 30px 0px 0px 40px;
+    margin: 30px 0px 0px 48px;
 }
 
 .about-us {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 0 50px;
+    margin: 0 50px 30px 50px;
 }
 
 .about-us-text {
@@ -140,19 +140,18 @@ footer ul li a {
 }
 
 #recipes-header {
-    visibility: hidden;
+    display: none;
 }
 
 .cuisine-links {
     display: flex;
     justify-content: center;
     gap: 0px;
-    margin: 50px 100px
 }
 
 .cuisine-header {
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: calc(2vw);
     letter-spacing: 1px;
     color: white;
     text-transform: uppercase;
@@ -181,15 +180,19 @@ footer ul li a {
     visibility: visible;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     .about-us-image {
         display: none;
     }
     #recipes-header {
-        visibility: visible;
+        display: block;
     }
     .cuisine-links {
         flex-flow: column;
+        margin-top: 10px;
+    }
+    .cuisine-header {
+        font-size: calc(3vw + 4px);
     }
     hr {
         display: block;
